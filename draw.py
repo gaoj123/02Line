@@ -64,8 +64,14 @@ def draw_line( x0, y0, x1, y1, screen, color ):
         elif m==1:
             smallX=min(x0,x1)
             bigX=max(x0,x1)
-            for i in range(smallX,bigX+1):
-                plot(screen,color,i,i)
+            if smallX==x0:
+                y=y0
+            else:
+                y=y1
+            while smallX<=bigX:
+                plot(screen,color,smallX,y)
+                smallX+=1
+                y+=1
         elif m==-1:
             smallX=min(x0,x1)
             bigX=max(x0,x1)
@@ -77,8 +83,6 @@ def draw_line( x0, y0, x1, y1, screen, color ):
                 plot(screen,color,smallX,y)
                 smallX+=1
                 y-=1
-            #for i in range(smallX,bigX+1):
-                #plot(screen,color,i,i*-1)
             
             
             

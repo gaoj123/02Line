@@ -2,7 +2,8 @@ from display import *
 from draw import *
 
 screen = new_screen()
-color = [ 0, 0, 255 ]
+color=[255, 203, 53]
+#color = [ 0, 0, 255 ]
 
 draw_line(250,280,230,320, screen, color) #Octant 7/3
 draw_line(230,320,210,280, screen, color) #Octant 2/6  
